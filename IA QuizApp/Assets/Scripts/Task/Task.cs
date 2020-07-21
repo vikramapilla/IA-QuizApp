@@ -48,13 +48,7 @@ public abstract class Task : ITask
             submitButton = masterCanvas.transform.Find(baseQuestionPopup + "/Container/Button - Submit").GetComponent<Button>();
             hideOverlayButton = masterCanvas.transform.Find(baseQuestionPopup + "/Container/Button - HideOverlay").GetComponent<Button>();
 
-            //questionObject.transform.SetParent(masterCanvas.transform.Find(baseQuestionPopup).transform);
-
-            masterCanvas.transform.Find("Popup - InputQuestion").gameObject.SetActive(!(taskType == TaskType.TYPE_1));
-            masterCanvas.transform.Find("Popup - OptionQuestion").gameObject.SetActive(!(taskType == TaskType.TYPE_2));
-
-            masterCanvas.transform.Find("Popup - InputQuestion").gameObject.SetActive(taskType == TaskType.TYPE_1);
-            masterCanvas.transform.Find("Popup - OptionQuestion").gameObject.SetActive(taskType == TaskType.TYPE_2);
+            //questionObject.transform.SetParent(masterCanvas.transform.Find(baseQuestionPopup).transform)
 
         }
 
